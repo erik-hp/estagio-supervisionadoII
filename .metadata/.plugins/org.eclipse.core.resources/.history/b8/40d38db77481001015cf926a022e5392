@@ -1,0 +1,5 @@
+package com.turmab.helpdesk;
+
+public interface ChamadoRepository extends JpaRepository<Chamado,Integer>{
+	
+}

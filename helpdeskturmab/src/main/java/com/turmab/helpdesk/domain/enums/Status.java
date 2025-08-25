@@ -1,0 +1,36 @@
+package com.turmab.helpdesk.domain.enums;
+
+public enum Status {
+	
+	ABERTO(0,"ABERTO"),
+	ANDAMENTO(1,"ANDAMENTO"),
+	ENCERRADO(2,"ENCERRADO");
+	
+	private Integer state;
+	private String stateDescription;
+	
+	private Status(Integer state, String stateDescription) {
+		this.state = state;
+		this.stateDescription = stateDescription;
+	}
+	
+	public Integer getState() {
+		return state;
+	}
+	
+	public String getStateDescription() {
+		return stateDescription;
+	}
+	
+	public static Status toEnum(Integer state) {
+        if (state == null) {
+            return null;
+        }
+        for (Status x : Status.values()) {
+            if (state.equals(x.getState())) {
+                return x;
+            }
+        }
+        throw new IllegalArgumentException("Prioridade inválida: " + state);
+    }
+}

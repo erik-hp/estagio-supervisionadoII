@@ -1,0 +1,32 @@
+package com.turmab.helpdesk.domain;
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import com.turmab.helpdesk.domain.enums.Prioridade;
+import com.turmab.helpdesk.domain.enums.Status;
+import java.util.Arrays;
+@Entity
+public class Chamado implements Serializable{
+	@ManyToOne
+    @JoinColumn(name = "tecnico_id")
+    private Tecnico tecnico;
+    
+    @ManyToOne
+    @JoinColumn(name = "cliente_id")
+    private Cliente cliente;
+    
+    // Construtor precisa incluir técnico e cliente
+    public Chamado(Integer id, Prioridade prioridade, Status status, String titulo, 
+                  String observacoes, Tecnico tecnico, Cliente cliente) {
+        this.id = id;
+        this.prioridade = prioridade;
+        this.status = status;
+        this.titulo = titulo;
+        this.observacoes = observacoes;
+        this.tecnico = tecnico;
+        this.cliente = cliente;
+    }
+}

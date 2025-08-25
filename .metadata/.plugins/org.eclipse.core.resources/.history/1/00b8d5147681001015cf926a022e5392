@@ -1,0 +1,7 @@
+package com.turmab.helpdesk.domain;
+
+
+@Entity
+public class Cliente extends Pessoa{
+	
+}

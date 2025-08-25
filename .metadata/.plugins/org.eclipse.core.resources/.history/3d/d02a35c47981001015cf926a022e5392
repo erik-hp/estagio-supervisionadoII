@@ -1,0 +1,7 @@
+package com.turmab.helpdesk.domain;
+import javax.persistence.Entity;
+
+@Entity
+public class Cliente extends Pessoa{
+	
+}

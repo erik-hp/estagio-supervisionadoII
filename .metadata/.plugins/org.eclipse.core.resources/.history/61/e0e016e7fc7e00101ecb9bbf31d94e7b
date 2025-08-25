@@ -1,0 +1,8 @@
+package com.turmab.helpdesk.domain;
+package com.turmab.helpdesk.domain.enums.Perfil;
+import java.time.LocalDate;
+import jakarta.persistence.*;
+
+public class Chamado {
+	
+}

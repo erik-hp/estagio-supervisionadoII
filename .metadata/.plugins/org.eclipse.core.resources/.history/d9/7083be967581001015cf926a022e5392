@@ -1,0 +1,8 @@
+package com.turmab.helpdesk.domain;
+
+import com.turmab.helpdesk.domain.enums.Perfil;
+
+
+public class Tecnico extends Pessoa{
+	
+}

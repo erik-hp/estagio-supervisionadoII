@@ -1,0 +1,5 @@
+package com.turmab.helpdesk.domain;
+
+public abstract class Pessoa {
+
+}

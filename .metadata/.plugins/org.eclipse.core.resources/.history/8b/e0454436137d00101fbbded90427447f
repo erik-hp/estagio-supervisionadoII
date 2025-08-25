@@ -1,0 +1,19 @@
+package com.turmab.helpdesk;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class HelpdeskturmabApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(HelpdeskturmabApplication.class, args);
+    }
+    
+    @EventListener(ApplicationReadyEvent.class)
+    public void onApplicationReady(){
+    	System.out.println("********************************************");
+    	System.out.println("* APLICAÇÃO HELP DESK INICIADA COM SUCESSO *");
+    	System.out.println("********************************************");
+    }
+}

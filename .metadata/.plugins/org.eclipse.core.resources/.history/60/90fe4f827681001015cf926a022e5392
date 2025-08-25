@@ -1,0 +1,34 @@
+package com.turmab.helpdesk;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Component;
+
+@SpringBootApplication
+@Component
+public class HelpdeskturmabApplication implements CommandLineRunner {
+
+	public static void main(String[] args) {
+		SpringApplication.run(HelpdeskturmabApplication.class, args);
+		
+		
+		
+	}
+
+	@Override
+	public void run(String... args) {
+		@Autowired
+		tecnicoRepository;
+		
+		@Autowired
+		clienteRepository;
+		
+		@Autowired
+		chamadoRepository;
+		System.out.println("******************");
+		System.out.println("   Aplicação Help Desk Iniciada com sucesso!      ");
+		System.out.println("******************");
+	}
+}

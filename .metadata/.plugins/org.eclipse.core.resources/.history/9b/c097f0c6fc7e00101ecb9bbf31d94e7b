@@ -1,0 +1,6 @@
+package com.turmab.helpdesk.domain;
+package com.turmab.helpdesk.domain.enums.Perfil;
+
+public class Chamado {
+	
+}

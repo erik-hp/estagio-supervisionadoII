@@ -1,0 +1,60 @@
+package com.turmab.helpdesk.domain;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import com.turmab.helpdesk.domain.enums.Perfil;
+import com.turmab.helpdesk.domain.enums.Prioridade;
+import com.turmab.helpdesk.domain.enums.Status;
+
+import java.io.Serializable;
+import java.time.LocalDate;
+
+@Entity
+public class Chamado implements Serializable{
+	private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    private LocalDate dataAbertura = LocalDate.now();
+    private LocalDate dataFechamento;
+
+    private String titulo;
+    private String observacoes;
+
+    @Enumerated(EnumType.STRING)
+    private Prioridade prioridade;
+
+    @Enumerated(EnumType.STRING)
+    private Status status;
+
+    @ManyToOne
+    @JoinColumn(name = "tecnico_id")
+    private Tecnico tecnico;
+
+    @ManyToOne
+    @JoinColumn(name = "cliente_id")
+    private Cliente cliente;
+
+    // Construtor vazio
+    public Chamado() {}
+
+    // Construtor usado na Main
+    public Chamado(Integer id, Prioridade prioridade, Status status,
+                   String titulo, String observacoes,
+                   Tecnico tecnico, Cliente cliente) {
+        this.id = id;
+        this.dataAbertura = LocalDate.now();
+        this.prioridade = prioridade;
+        this.status = status;
+        this.titulo = titulo;
+        this.observacoes = observacoes;
+        this.tecnico = tecnico;
+        this.cliente = cliente;
+    }
+}

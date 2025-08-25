@@ -1,0 +1,5 @@
+package com.turmab.helpdesk.domain.enums;
+
+public enum Perfil {
+
+}
