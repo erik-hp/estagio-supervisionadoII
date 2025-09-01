@@ -1,7 +1,0 @@
-package com.turmab.helpdesk.domain;
-
-import java.time.LocalDate;
-
-public class Chamado {
-	
-}

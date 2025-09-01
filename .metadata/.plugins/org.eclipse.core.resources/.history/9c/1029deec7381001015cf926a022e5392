@@ -1,5 +1,0 @@
-package repositories;
-
-public interface ChamadoRepository extends JpaRepository<Chamado,Integer>{
-
-}

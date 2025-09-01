@@ -1,7 +1,0 @@
-package com.turmab.helpdesk.domain;
-package com.turmab.helpdesk.enums.Status;
-package com.turmab.helpdesk.enums.Prioridade;
-
-public class Chamado {
-	
-}

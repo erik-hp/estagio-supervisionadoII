@@ -1,8 +1,0 @@
-package com.turmab.helpdesk.domain;
-import javax.persistence.Entity;
-import java.time.LocalDate;
-
-@Entity
-public class Chamado {
-	
-}
